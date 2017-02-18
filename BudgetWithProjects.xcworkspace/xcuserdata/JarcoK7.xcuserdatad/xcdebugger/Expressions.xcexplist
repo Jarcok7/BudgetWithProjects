@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Date.startOfWeek() -&gt; Date:ReportsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Calendar.current.date(from: comp)!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SelectFilterItemsTableViewController.viewWillDisappear(Bool) -&gt; ():SelectFilterItemsTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MasterViewController.fetchedResultsController.getter:MasterViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ReportsTableViewController.getPredicate() -&gt; NSPredicate?:ReportsTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MasterViewController.viewDidAppear(Bool) -&gt; ():MasterViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.isBeingPresented">
+            </PersistentString>
+            <PersistentString
+               value = "self.isMovingToParentViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Category.type.getter:Category+CoreDataProperties.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportVariantsTableViewController.tableView(UITableView, didSelectRowAt : IndexPath) -&gt; ():ReportVariantsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "reportVariants.endIndex">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static Transaction.(loadDataFromCSV() -&gt; Bool).(closure #2):Transaction.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MainTableViewCell.layoutSubviews() -&gt; ():MainTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "bounds.size.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportsTableViewController.refreshItems(needSorting : Bool) -&gt; ():ReportsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(item![&quot;sumTotal&quot;] as? Double ?? 0) + (itemWithRate[&quot;sumTotal&quot;] as? Double ?? 0) / (itemWithRate[&quot;rate&quot;] as? Double ?? 0) * Double(presentCurrency.rate)">
+            </PersistentString>
+            <PersistentString
+               value = "(itemWithRate[&quot;sumTotal&quot;] as? Double ?? 0) / (itemWithRate[&quot;rate&quot;] as? Double ?? 0) * Double(presentCurrency.rate)">
+            </PersistentString>
+            <PersistentString
+               value = "item![&quot;sumTotal&quot;] as? Double">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static UsedCurrency.(updateRates(NSManagedObjectContext?) -&gt; ()).(closure #1):UsedCurrency.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "httpResponse.statusCode">
+            </PersistentString>
+            <PersistentString
+               value = "apiEndPoint">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportsTableViewController.viewDidLoad() -&gt; ():ReportsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Calendar.current.timeZone">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportsTableViewController.prepare(for : UIStoryboardSegue, sender : Any?) -&gt; ():ReportsTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ReportsTableViewController.refreshItems() -&gt; ():ReportsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "itemWithRate[&quot;rate&quot;] as? Double">
+            </PersistentString>
+            <PersistentString
+               value = "itemWithRate[&quot;sumTotal&quot;] as? Double">
+            </PersistentString>
+            <PersistentString
+               value = "presentCurrency.rate">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportVariantsTableViewController.(tableView(UITableView, editActionsForRowAt : IndexPath) -&gt; [UITableViewRowAction]?).(closure #1):ReportVariantsTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Date.startOfYear() -&gt; Date:ReportsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Calendar.current.date(from: comp)!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TransactionDetailViewController.tableView(UITableView, heightForRowAt : IndexPath) -&gt; CGFloat:TransactionDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "transaction">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportVariantsTableViewController.viewWillAppear(Bool) -&gt; ():ReportVariantsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "reportVariants.index(of: currentVariant)!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportsTableViewController.(refreshItems() -&gt; ()).(closure #1):ReportsTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ReportVariantsTableViewController.saveVariants() -&gt; ():ReportVariantsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ReportVariant.ArchiveURL.path">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainTableViewCell.handlePan(recognizer : UIPanGestureRecognizer) -&gt; ():MainTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "minusOnDragRelease">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportsFilterTableViewController.tableView(UITableView, didSelectRowAt : IndexPath) -&gt; ():ReportsFilterTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.reuseIdentifier">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static Transaction.(loadDataFromCSV(moc : NSManagedObjectContext) -&gt; ()).(closure #2):Transaction.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "categoryType == CategoryType.transfer">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static Transaction.(loadDataFromCSV(moc : NSManagedObjectContext) -&gt; Bool).(closure #2):Transaction.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "record[2].toDate()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SelectFilterItemsTableViewController.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:SelectFilterItemsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+            <PersistentString
+               value = "cell.selected">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CSVImporter.init(url : URL, delimiter : String, lineEnding : LineEnding) -&gt; CSVImporter&lt;A&gt;?:CSVImporter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "url.isFileURL">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SelectPeriodViewController.standartPeriodChanged(Any) -&gt; ():SelectPeriodViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SelectPeriodViewController.pickerView(UIPickerView, didSelectRow : Int, inComponent : Int) -&gt; ():SelectPeriodViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UISegmentedControlNoSegment">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static Transaction.getReportInfo(managedObjectContext : NSManagedObjectContext, itemsWithRates : [[String : AnyObject]], presentCurrency : UsedCurrency, needSorting : Bool) -&gt; [[String : AnyObject]]:Transaction.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ReportsTableViewController.viewWillAppear(Bool) -&gt; ():ReportsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "isViewLoaded">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SelectPeriodViewController.setEndDate() -&gt; ():SelectPeriodViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "endDate">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ReportsTableViewController.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:ReportsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.frame.size.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MasterViewController.viewDidLoad() -&gt; ():MasterViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationController.navigationBar.backItem">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,6 @@
+framework module Pods_BudgetWithProjects {
+  umbrella header "Pods-BudgetWithProjects-umbrella.h"
+
+  export *
+  module * { export * }
+}

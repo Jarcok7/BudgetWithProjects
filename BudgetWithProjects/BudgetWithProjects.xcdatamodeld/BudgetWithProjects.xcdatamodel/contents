@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Account" representedClassName=".Account" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="open" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="orderIndex" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Transaction" inverseName="account" inverseEntity="Transaction" syncable="YES"/>
+    </entity>
+    <entity name="Category" representedClassName=".Category" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="typeValue" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Transaction" inverseName="category" inverseEntity="Transaction" syncable="YES"/>
+    </entity>
+    <entity name="Project" representedClassName=".Project" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="open" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="orderIndex" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="shortName" attributeType="String" syncable="YES"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Transaction" inverseName="project" inverseEntity="Transaction" syncable="YES"/>
+    </entity>
+    <entity name="Transaction" representedClassName=".Transaction">
+        <attribute name="dayForSection" optional="YES" transient="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="plan" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="planWithoutDate" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="subsidiary" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sum" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="account" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="transactions" inverseEntity="Account" syncable="YES"/>
+        <relationship name="category" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="transactions" inverseEntity="Category" syncable="YES"/>
+        <relationship name="correspondingTransaction" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Transaction" inverseName="correspondingTransaction" inverseEntity="Transaction" syncable="YES"/>
+        <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="transactions" inverseEntity="Project" syncable="YES"/>
+        <relationship name="usedCurrency" maxCount="1" deletionRule="Nullify" destinationEntity="UsedCurrency" inverseName="transactions" inverseEntity="UsedCurrency" syncable="YES"/>
+        <userInfo/>
+    </entity>
+    <entity name="UsedCurrency" representedClassName=".UsedCurrency" syncable="YES">
+        <attribute name="code" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="orderIndex" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="rate" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="rateDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="used" attributeType="Boolean" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Transaction" inverseName="usedCurrency" inverseEntity="Transaction" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Account" positionX="261" positionY="207" width="128" height="105"/>
+        <element name="Category" positionX="270" positionY="243" width="128" height="30"/>
+        <element name="Project" positionX="270" positionY="234" width="128" height="30"/>
+        <element name="Transaction" positionX="261" positionY="189" width="128" height="240"/>
+        <element name="UsedCurrency" positionX="261" positionY="198" width="128" height="150"/>
+    </elements>
+</model>
