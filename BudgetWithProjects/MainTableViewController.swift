@@ -304,7 +304,7 @@ class MainTableViewController: UITableViewController, MainTableViewCellDelegate 
             for currency in currencies {
                 let sum = Transaction.getSum(forAccount: account, forCurrency: currency, sumInfo: sumInfo, managedObjectContext: managedObjectContext!)
                 
-                if sum == 0 {
+                if sum.roundTo(places: 2) == 0 {
                     continue
                 }
                 
@@ -340,4 +340,12 @@ class MainTableViewController: UITableViewController, MainTableViewCellDelegate 
         }
     }
 
+}
+
+extension Double {
+    /// Rounds the double to decimal places value
+    func roundTo(places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
+    }
 }
