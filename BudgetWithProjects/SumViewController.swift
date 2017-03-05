@@ -197,10 +197,10 @@ class SumViewController: UIViewController, UIPopoverPresentationControllerDelega
         
         let addNew = (!exchangeCurrencyMode && detailItem.sum == 0) || (exchangeCurrencyMode && detailItem.correspondingSum == 0)
         
-        for subview in view.subviews where subview.tag >= 1001 {
-            let btn = subview as! UIButton
-            btn.addTarget(self, action: #selector(numbersButtonTapped), for: .touchUpInside)
-        }
+//        for subview in view.subviews where subview.tag >= 1001 {
+//            let btn = subview as! UIButton
+//            btn.addTarget(self, action: #selector(numbersButtonTapped), for: .touchUpInside)
+//        }
         
         if addNew {
             nextSaveButton = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(nextTapped))
@@ -343,7 +343,7 @@ class SumViewController: UIViewController, UIPopoverPresentationControllerDelega
         
     }
     
-    func numbersButtonTapped(_ sender: UIButton) {
+    @IBAction func numbersButtonTapped(_ sender: UIButton) {
         
         let btnText = (sender.titleLabel?.text)!
         var sumAsTextLoc = sumAsText
