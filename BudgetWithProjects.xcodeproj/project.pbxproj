@@ -60,6 +60,8 @@
 		BFFF246C1E6FFC3B00293FE2 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF246B1E6FFC3B00293FE2 /* Authentication.swift */; };
 		BFFF246E1E701A4300293FE2 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF246D1E701A4300293FE2 /* PasswordViewController.swift */; };
 		BFFF24701E70222500293FE2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF246F1E70222500293FE2 /* MainTabBarController.swift */; };
+		BFFF24801E73F35600293FE2 /* HistoricalRates+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF247E1E73F35600293FE2 /* HistoricalRates+CoreDataClass.swift */; };
+		BFFF24811E73F35600293FE2 /* HistoricalRates+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF247F1E73F35600293FE2 /* HistoricalRates+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +121,8 @@
 		BFFF246B1E6FFC3B00293FE2 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		BFFF246D1E701A4300293FE2 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		BFFF246F1E70222500293FE2 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BFFF247E1E73F35600293FE2 /* HistoricalRates+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HistoricalRates+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFFF247F1E73F35600293FE2 /* HistoricalRates+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HistoricalRates+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CC1CDFFE304C09691C87AC98 /* Pods_BudgetWithProjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BudgetWithProjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D9DE964521B616AFA6B97F /* Pods-BudgetWithProjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetWithProjects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BudgetWithProjects/Pods-BudgetWithProjects.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +179,8 @@
 		BFAD86161CFCA197002D8B65 /* BudgetWithProjects */ = {
 			isa = PBXGroup;
 			children = (
+				BFFF247E1E73F35600293FE2 /* HistoricalRates+CoreDataClass.swift */,
+				BFFF247F1E73F35600293FE2 /* HistoricalRates+CoreDataProperties.swift */,
 				BF276EAB1D43B08400FFACC3 /* Account.swift */,
 				BF276EAA1D43B08400FFACC3 /* Account+CoreDataProperties.swift */,
 				BF276EA81D40B0DA00FFACC3 /* AccountsTableViewController.swift */,
@@ -267,7 +273,7 @@
 					BFAD86131CFCA197002D8B65 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = VQ772XVV32;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -373,6 +379,7 @@
 				BFAD86181CFCA197002D8B65 /* AppDelegate.swift in Sources */,
 				BF65DECE1D9267D700428244 /* TempTransaction.swift in Sources */,
 				BF0FE9361D684AB500C4CDD9 /* DescriptionTableViewController.swift in Sources */,
+				BFFF24801E73F35600293FE2 /* HistoricalRates+CoreDataClass.swift in Sources */,
 				BFED07F71DD4549C0063125A /* SelectPeriodViewController.swift in Sources */,
 				BF0FE92D1D5B177E00C4CDD9 /* Category+CoreDataProperties.swift in Sources */,
 				BF276EAC1D43B08400FFACC3 /* Account+CoreDataProperties.swift in Sources */,
@@ -404,6 +411,7 @@
 				BF2BDB1C1DC47706008DB258 /* ReportFilter.swift in Sources */,
 				BFD5ED571E13A4B1001E7CAF /* Model.xcmappingmodel in Sources */,
 				BFFF246C1E6FFC3B00293FE2 /* Authentication.swift in Sources */,
+				BFFF24811E73F35600293FE2 /* HistoricalRates+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +531,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = VQ772XVV32;
 				INFOPLIST_FILE = BudgetWithProjects/Info.plist;
@@ -531,6 +540,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -542,6 +552,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = VQ772XVV32;
 				INFOPLIST_FILE = BudgetWithProjects/Info.plist;

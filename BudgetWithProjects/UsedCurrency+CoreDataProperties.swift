@@ -20,5 +20,7 @@ extension UsedCurrency {
     @NSManaged var used: Bool
     @NSManaged var rate: Float
     @NSManaged var rateDate: Date?
+    
+    @NSManaged var historicalRates : NSSet
 
 }

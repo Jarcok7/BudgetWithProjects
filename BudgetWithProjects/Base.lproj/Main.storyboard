@@ -764,52 +764,8 @@
                                             <segue destination="D4A-v0-Sfr" kind="show" id="U7y-2n-Ss8"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="McU-6C-dXk">
-                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="McU-6C-dXk" id="d2S-Wv-Rkl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nui-Oc-l94">
-                                                    <rect key="frame" x="8" y="6" width="359" height="30"/>
-                                                    <state key="normal" title="Export data to CSV (via Email)"/>
-                                                    <connections>
-                                                        <action selector="exportCSV:" destination="86i-PI-3XT" eventType="touchUpInside" id="g8R-lI-Cdv"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Nui-Oc-l94" firstAttribute="leading" secondItem="d2S-Wv-Rkl" secondAttribute="leadingMargin" id="4nU-nN-Zh4"/>
-                                                <constraint firstItem="Nui-Oc-l94" firstAttribute="trailing" secondItem="d2S-Wv-Rkl" secondAttribute="trailingMargin" id="Dr7-Sm-pWU"/>
-                                                <constraint firstItem="Nui-Oc-l94" firstAttribute="centerY" secondItem="d2S-Wv-Rkl" secondAttribute="centerY" id="Skh-nA-zbt"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zET-fs-XY9">
-                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zET-fs-XY9" id="FUm-3B-NOE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1N8-YD-YYT">
-                                                    <rect key="frame" x="8" y="6" width="359" height="30"/>
-                                                    <state key="normal" title="Import data from CSV (Dropbox link)"/>
-                                                    <connections>
-                                                        <action selector="loadCSVFromDropbox:" destination="86i-PI-3XT" eventType="touchUpInside" id="jqM-fn-Sl8"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="1N8-YD-YYT" firstAttribute="leading" secondItem="FUm-3B-NOE" secondAttribute="leadingMargin" id="IWv-k7-rce"/>
-                                                <constraint firstItem="1N8-YD-YYT" firstAttribute="trailing" secondItem="FUm-3B-NOE" secondAttribute="trailingMargin" id="J5Y-cW-NXi"/>
-                                                <constraint firstItem="1N8-YD-YYT" firstAttribute="centerY" secondItem="FUm-3B-NOE" secondAttribute="centerY" id="zoe-7F-i6T"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="o7A-YV-KUa">
-                                        <rect key="frame" x="0.0" y="264" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o7A-YV-KUa" id="why-UZ-Gjp">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
@@ -835,6 +791,50 @@
                                                 <constraint firstItem="nCD-Js-Vuc" firstAttribute="centerY" secondItem="FpT-L7-3bR" secondAttribute="centerY" id="Tab-qV-1fg"/>
                                                 <constraint firstItem="nCD-Js-Vuc" firstAttribute="leading" secondItem="why-UZ-Gjp" secondAttribute="leadingMargin" constant="7" id="o8E-EY-tDd"/>
                                                 <constraint firstItem="nCD-Js-Vuc" firstAttribute="centerY" secondItem="why-UZ-Gjp" secondAttribute="centerY" id="vrc-Hp-fcU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="McU-6C-dXk">
+                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="McU-6C-dXk" id="d2S-Wv-Rkl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nui-Oc-l94">
+                                                    <rect key="frame" x="8" y="6" width="359" height="30"/>
+                                                    <state key="normal" title="Export data to CSV (via Email)"/>
+                                                    <connections>
+                                                        <action selector="exportCSV:" destination="86i-PI-3XT" eventType="touchUpInside" id="g8R-lI-Cdv"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Nui-Oc-l94" firstAttribute="leading" secondItem="d2S-Wv-Rkl" secondAttribute="leadingMargin" id="4nU-nN-Zh4"/>
+                                                <constraint firstItem="Nui-Oc-l94" firstAttribute="trailing" secondItem="d2S-Wv-Rkl" secondAttribute="trailingMargin" id="Dr7-Sm-pWU"/>
+                                                <constraint firstItem="Nui-Oc-l94" firstAttribute="centerY" secondItem="d2S-Wv-Rkl" secondAttribute="centerY" id="Skh-nA-zbt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zET-fs-XY9">
+                                        <rect key="frame" x="0.0" y="264" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zET-fs-XY9" id="FUm-3B-NOE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1N8-YD-YYT">
+                                                    <rect key="frame" x="8" y="6" width="359" height="30"/>
+                                                    <state key="normal" title="Import data from CSV (Dropbox link)"/>
+                                                    <connections>
+                                                        <action selector="loadCSVFromDropbox:" destination="86i-PI-3XT" eventType="touchUpInside" id="jqM-fn-Sl8"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1N8-YD-YYT" firstAttribute="leading" secondItem="FUm-3B-NOE" secondAttribute="leadingMargin" id="IWv-k7-rce"/>
+                                                <constraint firstItem="1N8-YD-YYT" firstAttribute="trailing" secondItem="FUm-3B-NOE" secondAttribute="trailingMargin" id="J5Y-cW-NXi"/>
+                                                <constraint firstItem="1N8-YD-YYT" firstAttribute="centerY" secondItem="FUm-3B-NOE" secondAttribute="centerY" id="zoe-7F-i6T"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
