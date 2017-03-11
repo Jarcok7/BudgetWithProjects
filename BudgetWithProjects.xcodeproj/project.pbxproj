@@ -56,6 +56,10 @@
 		BFFA8F081D3A30340008DB31 /* UsedCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFA8F061D3A30340008DB31 /* UsedCurrency.swift */; };
 		BFFA8F0A1D3A439E0008DB31 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFA8F091D3A439E0008DB31 /* SettingsTableViewController.swift */; };
 		BFFE6D281E2A2EE600907FC4 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFE6D271E2A2EE600907FC4 /* LocalAuthentication.framework */; };
+		BFFF246A1E6FF67D00293FE2 /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF24691E6FF67D00293FE2 /* KeychainPasswordItem.swift */; };
+		BFFF246C1E6FFC3B00293FE2 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF246B1E6FFC3B00293FE2 /* Authentication.swift */; };
+		BFFF246E1E701A4300293FE2 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF246D1E701A4300293FE2 /* PasswordViewController.swift */; };
+		BFFF24701E70222500293FE2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF246F1E70222500293FE2 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +115,10 @@
 		BFFA8F061D3A30340008DB31 /* UsedCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsedCurrency.swift; sourceTree = "<group>"; };
 		BFFA8F091D3A439E0008DB31 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		BFFE6D271E2A2EE600907FC4 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		BFFF24691E6FF67D00293FE2 /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
+		BFFF246B1E6FFC3B00293FE2 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		BFFF246D1E701A4300293FE2 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		BFFF246F1E70222500293FE2 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CC1CDFFE304C09691C87AC98 /* Pods_BudgetWithProjects.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BudgetWithProjects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D9DE964521B616AFA6B97F /* Pods-BudgetWithProjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetWithProjects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BudgetWithProjects/Pods-BudgetWithProjects.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +184,7 @@
 				BFD5ED5A1E1EC3E1001E7CAF /* AppIconsMedia.xcassets */,
 				BFAD86191CFCA197002D8B65 /* BudgetWithProjects.xcdatamodeld */,
 				BF0FE92C1D5B177E00C4CDD9 /* Category.swift */,
+				BFFF246B1E6FFC3B00293FE2 /* Authentication.swift */,
 				BFD5ED561E13A4B1001E7CAF /* Model.xcmappingmodel */,
 				BFD5ED531E11083A001E7CAF /* ModelMigrationPolicy1to2.swift */,
 				BF0FE92B1D5B177E00C4CDD9 /* Category+CoreDataProperties.swift */,
@@ -184,6 +193,7 @@
 				BF276EBC1D5074FA00FFACC3 /* ChooseProjectTableViewController.swift */,
 				BFF1A11B1D29754A004E7D16 /* currencies.json */,
 				BFD440DD1D1A7B3A00D20066 /* CurrenciesTableViewCell.swift */,
+				BFFF24691E6FF67D00293FE2 /* KeychainPasswordItem.swift */,
 				BFD440D91D1A768A00D20066 /* CurrenciesTableViewController.swift */,
 				BF7E88101D7FEC2E002212BA /* DatePickerViewController.swift */,
 				BF0FE9351D684AB500C4CDD9 /* DescriptionTableViewController.swift */,
@@ -193,6 +203,8 @@
 				BFAD861C1CFCA197002D8B65 /* MasterViewController.swift */,
 				BFEC06721DAE222E00B13D50 /* MainTableViewController.swift */,
 				BFA5433F1DAF63D500C4BECB /* MainTableViewCell.swift */,
+				BFFF246F1E70222500293FE2 /* MainTabBarController.swift */,
+				BFFF246D1E701A4300293FE2 /* PasswordViewController.swift */,
 				BF276EB31D49E86C00FFACC3 /* Project.swift */,
 				BF276EB21D49E86C00FFACC3 /* Project+CoreDataProperties.swift */,
 				BF276EBA1D5069B800FFACC3 /* ProjectsSC.swift */,
@@ -352,6 +364,7 @@
 				BFD440DA1D1A768A00D20066 /* CurrenciesTableViewController.swift in Sources */,
 				BFA543401DAF63D500C4BECB /* MainTableViewCell.swift in Sources */,
 				BFAD861B1CFCA197002D8B65 /* BudgetWithProjects.xcdatamodeld in Sources */,
+				BFFF24701E70222500293FE2 /* MainTabBarController.swift in Sources */,
 				BF1D54D71DBB4BB50002161F /* SelectFilterItemsTableViewController.swift in Sources */,
 				BFF893781DE9A5B800104E99 /* ReportsDrillTableViewController.swift in Sources */,
 				BFFA8F081D3A30340008DB31 /* UsedCurrency.swift in Sources */,
@@ -368,9 +381,11 @@
 				BF276EBB1D5069B800FFACC3 /* ProjectsSC.swift in Sources */,
 				BF276EB41D49E86C00FFACC3 /* Project+CoreDataProperties.swift in Sources */,
 				BF7E88111D7FEC2E002212BA /* DatePickerViewController.swift in Sources */,
+				BFFF246A1E6FF67D00293FE2 /* KeychainPasswordItem.swift in Sources */,
 				BF276EBD1D5074FA00FFACC3 /* ChooseProjectTableViewController.swift in Sources */,
 				BF65DECC1D8A7C1D00428244 /* TransactionTableViewCell.swift in Sources */,
 				BFFA8F0A1D3A439E0008DB31 /* SettingsTableViewController.swift in Sources */,
+				BFFF246E1E701A4300293FE2 /* PasswordViewController.swift in Sources */,
 				BFAD861F1CFCA197002D8B65 /* TransactionDetailViewController.swift in Sources */,
 				BF0FE9301D5C60BD00C4CDD9 /* CategoryTableViewController.swift in Sources */,
 				BFAD862F1CFD784D002D8B65 /* SumViewController.swift in Sources */,
@@ -388,6 +403,7 @@
 				BFD5ED541E11083A001E7CAF /* ModelMigrationPolicy1to2.swift in Sources */,
 				BF2BDB1C1DC47706008DB258 /* ReportFilter.swift in Sources */,
 				BFD5ED571E13A4B1001E7CAF /* Model.xcmappingmodel in Sources */,
+				BFFF246C1E6FFC3B00293FE2 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

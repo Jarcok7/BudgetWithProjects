@@ -10,17 +10,16 @@ import UIKit
 import CoreData
 import MessageUI
 
-class SettingsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate {
+class SettingsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate, UITextFieldDelegate {
+    
+    let autentication = Authentication()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.tableFooterView = UIView()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        useAuthentication.isOn = autentication.used()
     }
 
     override func didReceiveMemoryWarning() {
@@ -94,64 +93,114 @@ class SettingsTableViewController: UITableViewController, MFMailComposeViewContr
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
-    // MARK: - Table view data source
-    /*
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-    */
     
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    @IBOutlet weak var useAuthentication: UISwitch!
+    
+    @IBAction func switchUseAuthentication(_ sender: UISwitch) {
+        if sender.isOn {
+            onAuthentication(message: nil)
+        } else {
+            offAuthentication(message: nil)
+        }
     }
-    */
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    func onAuthentication(message: String?) {
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Set password", message: message, preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField(configurationHandler: { (textField) -> Void in
+            textField.placeholder = "Password (4 digits)"
+            textField.autocapitalizationType = .none
+            textField.keyboardType = .numberPad
+            textField.isSecureTextEntry = true
+            textField.delegate = self
+        })
+        
+        alert.addTextField(configurationHandler: { (textField) -> Void in
+            textField.placeholder = "Repeat password (4 digits)"
+            textField.autocapitalizationType = .none
+            textField.keyboardType = .numberPad
+            textField.isSecureTextEntry = true
+            textField.delegate = self
+        })
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [unowned self] (action) -> Void in self.useAuthentication.isOn = self.autentication.used() }))
+        
+        //3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [unowned self] (action) -> Void in
+            let textFieldPassword = alert.textFields![0] as UITextField
+            let textFieldRepeatPassword = alert.textFields![1] as UITextField
+            let password = textFieldPassword.text!
+            let repeatPassword = textFieldRepeatPassword.text!
+            
+            if password.characters.count != 4 {
+                self.onAuthentication(message: "Password must contain 4 digits")
+                return
+            }
+            
+            if password != repeatPassword {
+                self.onAuthentication(message: "Password and repeating password don't match")
+                return
+            }
+            
+            self.autentication.on(newPassword: password)
+            self.useAuthentication.isOn = self.autentication.used()
+            
+        }))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func offAuthentication(message: String?) {
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Enter password", message: message, preferredStyle: .alert)
+        
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField(configurationHandler: { (textField) -> Void in
+            textField.placeholder = "Password (4 digits)"
+            textField.autocapitalizationType = .none
+            textField.keyboardType = .numberPad
+            textField.isSecureTextEntry = true
+            textField.delegate = self
+        })
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { [unowned self] (action) -> Void in self.useAuthentication.isOn = self.autentication.used() } ))
+        
+        //3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [unowned self] (action) -> Void in
+            let textFieldPassword = alert.textFields![0] as UITextField
+            let password = textFieldPassword.text!
+            
+            let passwordItem = self.autentication.passwordItem
+            if let passwordFromKeyChain = try? passwordItem.readPassword() {
+                if password != passwordFromKeyChain {
+                    self.offAuthentication(message: "Wrong password")
+                    return
+                } else {
+                    try? passwordItem.deleteItem()
+                }
+            } else {
+                try? passwordItem.deleteItem()
+            }
+            try? passwordItem.deleteItem()
+            self.useAuthentication.isOn = self.autentication.used()
+            
+        }))
+        
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    
+    // MARK: - UITFDelegate
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        let newString = (textField.text! as NSString).replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= 4
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
